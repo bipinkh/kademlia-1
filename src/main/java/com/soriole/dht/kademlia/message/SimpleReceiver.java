@@ -1,5 +1,8 @@
 package com.soriole.dht.kademlia.message;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 
 /**
@@ -10,16 +13,17 @@ import java.io.IOException;
  */
 public class SimpleReceiver implements Receiver
 {
+    private static final Logger logger = LoggerFactory.getLogger(SimpleReceiver.class);
 
     @Override
     public void receive(Message incoming, int conversationId)
     {
-        System.out.println("Received message: " + incoming);
+        logger.info("\nConversation Id : {} \nReceived Message : {} ", conversationId,incoming);
     }
 
     @Override
     public void timeout(int conversationId) throws IOException
     {
-        System.out.println("SimpleReceiver message timeout.");
+        logger.info("\nSimpleReceiver message timeout for conversation id : " , conversationId);
     }
 }

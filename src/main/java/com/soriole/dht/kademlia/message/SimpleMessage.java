@@ -14,7 +14,7 @@ public class SimpleMessage implements Message
 {
 
     /* Message constants */
-    public static final byte CODE = 0x07;
+    public static final byte CONSTANTCODE = 0x07;
 
     private String content;
 
@@ -31,7 +31,7 @@ public class SimpleMessage implements Message
     @Override
     public byte code()
     {
-        return CODE;
+        return CONSTANTCODE;
     }
 
     @Override

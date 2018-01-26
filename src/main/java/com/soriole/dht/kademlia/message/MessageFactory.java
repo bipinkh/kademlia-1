@@ -44,7 +44,7 @@ public class MessageFactory implements KademliaMessageFactory
                 return new NodeLookupMessage(in);
             case NodeReplyMessage.CODE:
                 return new NodeReplyMessage(in);
-            case SimpleMessage.CODE:
+            case SimpleMessage.CONSTANTCODE:
                 return new SimpleMessage(in);
             case StoreContentMessage.CODE:
                 return new StoreContentMessage(in);
